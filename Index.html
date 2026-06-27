@@ -1,364 +1,1032 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Rajamallika Glass House - Madurai's trusted glass experts. Window glass, toughened glass, mirrors, glass doors. Call +91 98422 29659">
-<title>Rajamallika Glass House | Madurai</title>
-<style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:'Segoe UI',Arial,sans-serif;color:#1a1a1a;background:#fff}
-  a{text-decoration:none;color:inherit}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Century Glass — Authorized Saint-Gobain Distributor, Madurai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
 
-  /* NAV */
-  nav{display:flex;align-items:center;justify-content:space-between;padding:14px 40px;background:#fff;border-bottom:1px solid #e8e8e8;position:sticky;top:0;z-index:100;flex-wrap:wrap;gap:12px}
-  .logo{display:flex;align-items:center;gap:12px}
-  .logo-box{width:40px;height:40px;background:#185FA5;border-radius:8px;display:flex;align-items:center;justify-content:center}
-  .logo-box svg{width:22px;height:22px;fill:#fff}
-  .logo-name{font-size:15px;font-weight:600;color:#1a1a1a}
-  .logo-tag{font-size:11px;color:#666}
-  .nav-links{display:flex;gap:28px}
-  .nav-links a{font-size:13px;color:#555;transition:color 0.2s}
-  .nav-links a:hover{color:#185FA5}
-  .nav-call{background:#185FA5;color:#fff;padding:9px 20px;border-radius:8px;font-size:13px;font-weight:500;display:flex;align-items:center;gap:6px}
-  .nav-call:hover{background:#0C447C}
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  /* HERO */
-  .hero{background:#f7f9fc;padding:60px 40px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-  .hero-badge{display:inline-flex;align-items:center;gap:6px;background:#E6F1FB;color:#0C447C;font-size:12px;font-weight:500;padding:5px 14px;border-radius:20px;margin-bottom:18px}
-  .hero h1{font-size:36px;font-weight:700;line-height:1.25;color:#1a1a1a;margin-bottom:14px}
-  .hero h1 span{color:#185FA5}
-  .hero p{font-size:15px;color:#555;line-height:1.75;margin-bottom:28px}
-  .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-  .btn-primary{background:#185FA5;color:#fff;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:500;display:flex;align-items:center;gap:8px;border:none;cursor:pointer}
-  .btn-primary:hover{background:#0C447C}
-  .btn-wa{background:#25D366;color:#fff;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:500;display:flex;align-items:center;gap:8px;border:none;cursor:pointer}
-  .btn-wa:hover{background:#1da851}
-  .hero-card{background:#fff;border-radius:12px;border:1px solid #e8e8e8;padding:24px;display:flex;flex-direction:column;gap:14px}
-  .glass-types{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  .glass-type{background:#f7f9fc;border-radius:8px;padding:16px;text-align:center}
-  .glass-type .icon{font-size:28px;margin-bottom:6px}
-  .glass-type span{font-size:12px;color:#555;font-weight:500}
-  .location-bar{background:#f7f9fc;border-radius:8px;padding:12px 16px;display:flex;align-items:center;gap:10px}
-  .location-bar .loc-icon{font-size:20px}
-  .loc-addr{font-size:12px;font-weight:500;color:#1a1a1a}
-  .loc-sub{font-size:11px;color:#888}
-  .open-badge{margin-left:auto;background:#EAF3DE;color:#27500A;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px}
+    :root {
+      --navy:        #060d1a;
+      --navy-2:      #0c1a30;
+      --navy-3:      #112044;
+      --gold:        #C8A96E;
+      --gold-light:  #e8cfa0;
+      --gold-dim:    rgba(200,169,110,0.18);
+      --glass-bg:    rgba(255,255,255,0.06);
+      --glass-bg2:   rgba(255,255,255,0.10);
+      --glass-bg3:   rgba(255,255,255,0.14);
+      --glass-border:rgba(255,255,255,0.14);
+      --glass-border2:rgba(255,255,255,0.22);
+      --text:        #f0f4ff;
+      --text-muted:  rgba(240,244,255,0.6);
+      --text-hint:   rgba(240,244,255,0.35);
+      --blur:        blur(18px);
+      --blur-sm:     blur(10px);
+    }
 
-  /* STATS */
-  .stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8}
-  .stat{text-align:center;padding:28px 16px;border-right:1px solid #e8e8e8}
-  .stat:last-child{border-right:none}
-  .stat-num{font-size:30px;font-weight:700;color:#185FA5}
-  .stat-label{font-size:13px;color:#666;margin-top:4px}
+    html { scroll-behavior: smooth; }
 
-  /* SECTIONS */
-  section{padding:56px 40px}
-  .section-tag{font-size:12px;color:#185FA5;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
-  .section-title{font-size:26px;font-weight:700;margin-bottom:8px}
-  .section-sub{font-size:14px;color:#666;margin-bottom:32px;line-height:1.6}
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--navy);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-  /* SERVICES */
-  .services-bg{background:#f7f9fc}
-  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  @media(max-width:700px){.services-grid{grid-template-columns:1fr 1fr}}
-  .service-card{background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:22px;transition:box-shadow 0.2s}
-  .service-card:hover{box-shadow:0 4px 20px rgba(24,95,165,0.10)}
-  .service-icon{font-size:30px;margin-bottom:12px}
-  .service-card h3{font-size:14px;font-weight:600;margin-bottom:6px}
-  .service-card p{font-size:13px;color:#666;line-height:1.6}
+    /* ─── CANVAS BACKGROUND ─── */
+    #bg-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
 
-  /* GALLERY */
-  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-  .gallery-item{background:#f7f9fc;border-radius:10px;padding:32px 16px;text-align:center;border:1px solid #e8e8e8}
-  .gallery-item .g-icon{font-size:36px;margin-bottom:8px}
-  .gallery-item span{font-size:12px;color:#666}
+    /* ─── LAYOUT WRAPPER ─── */
+    .page { position: relative; z-index: 1; }
 
-  /* WHY US */
-  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .why-card{background:#f7f9fc;border-radius:10px;padding:20px}
-  .why-card .w-icon{font-size:24px;margin-bottom:8px}
-  .why-card h4{font-size:14px;font-weight:600;margin-bottom:4px}
-  .why-card p{font-size:12px;color:#666;line-height:1.6}
+    /* ─── RIBBON ─── */
+    .sg-ribbon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 9px 24px;
+      background: rgba(200,169,110,0.12);
+      backdrop-filter: var(--blur-sm);
+      border-bottom: 1px solid rgba(200,169,110,0.2);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+    .sg-dot { width: 6px; height: 6px; border-radius: 50%; }
+    .sg-red  { background: #e63027; box-shadow: 0 0 6px #e63027; }
+    .sg-blue { background: #5b9bd5; box-shadow: 0 0 6px #5b9bd5; }
 
-  /* REVIEWS */
-  .reviews-bg{background:#f7f9fc}
-  .reviews-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  @media(max-width:600px){.reviews-grid{grid-template-columns:1fr}}
-  .review-card{background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:20px}
-  .stars{color:#F59E0B;font-size:14px;margin-bottom:8px}
-  .review-text{font-size:13px;color:#444;line-height:1.7;margin-bottom:12px}
-  .reviewer-name{font-size:12px;font-weight:600;color:#1a1a1a}
-  .reviewer-tag{font-size:11px;color:#888}
+    /* ─── NAV ─── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 40px;
+      background: rgba(6,13,26,0.7);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--glass-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+    }
+    .nav-logo span {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      color: var(--text-hint);
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+    .nav-right { display: flex; align-items: center; gap: 14px; }
+    .nav-phone {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gold-light);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+    }
 
-  /* CONTACT */
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-  @media(max-width:700px){.contact-grid{grid-template-columns:1fr}}
-  .contact-items{display:flex;flex-direction:column;gap:20px}
-  .contact-item{display:flex;gap:14px;align-items:flex-start}
-  .c-icon{width:40px;height:40px;background:#E6F1FB;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-  .c-label{font-size:12px;color:#888;margin-bottom:2px}
-  .c-val{font-size:14px;font-weight:500;color:#1a1a1a}
-  .hours-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f0f0f0;font-size:13px}
-  .hours-row:last-child{border-bottom:none}
-  .hours-day{color:#555}
-  .hours-time{font-weight:500;color:#1a1a1a}
-  .closed{color:#E24B4A}
+    /* ─── BUTTONS ─── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      padding: 11px 20px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      box-shadow: 0 0 0 0 rgba(200,169,110,0);
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 24px rgba(200,169,110,0.35);
+    }
+    .btn-glass {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--glass-bg2);
+      color: var(--text);
+      border: 1px solid var(--glass-border2);
+      padding: 11px 20px;
+      font-size: 13px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      text-decoration: none;
+      backdrop-filter: var(--blur-sm);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-glass:hover {
+      background: var(--glass-bg3);
+      transform: translateY(-1px);
+    }
 
-  /* QUOTE FORM */
-  .quote-form{background:#f7f9fc;border-radius:12px;padding:28px;border:1px solid #e8e8e8}
-  .quote-form h3{font-size:17px;font-weight:600;margin-bottom:20px}
-  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-  .form-group{margin-bottom:14px}
-  .form-group label{display:block;font-size:12px;font-weight:500;color:#555;margin-bottom:5px}
-  .form-group input,.form-group select,.form-group textarea{width:100%;padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-size:13px;font-family:inherit;outline:none;background:#fff;color:#1a1a1a}
-  .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#185FA5}
-  .form-group textarea{height:80px;resize:none}
-  .submit-btn{width:100%;background:#185FA5;color:#fff;border:none;padding:12px;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
-  .submit-btn:hover{background:#0C447C}
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 40px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; left: -120px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(200,169,110,0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -80px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(91,155,213,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+    .hero-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 58px;
+      font-weight: 700;
+      line-height: 1.04;
+      color: var(--text);
+      margin-bottom: 22px;
+      text-shadow: 0 2px 40px rgba(0,0,0,0.4);
+    }
+    .hero-heading em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+    .hero-sub {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 32px;
+      max-width: 360px;
+      font-weight: 300;
+    }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
-  /* WHATSAPP BAR */
-  .wa-bar{background:#0F6E56;padding:16px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-  .wa-text{font-size:14px;color:#E1F5EE}
-  .wa-btn{background:#25D366;color:#fff;border:none;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:8px}
-  .wa-btn:hover{background:#1da851}
+    /* ─── HERO 3D GLASS PANEL ─── */
+    .hero-visual {
+      perspective: 1000px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .glass-cube {
+      width: 100%;
+      max-width: 380px;
+      aspect-ratio: 3/4;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.08s linear;
+    }
+    .glass-face {
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      border: 1px solid var(--glass-border2);
+      backdrop-filter: blur(22px);
+      background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.10) 0%,
+        rgba(255,255,255,0.04) 50%,
+        rgba(200,169,110,0.06) 100%
+      );
+      overflow: hidden;
+    }
+    .glass-face::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    }
+    .glass-face::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 1px; height: 100%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.4), transparent, rgba(200,169,110,0.2));
+    }
+    .glass-inner-content {
+      padding: 28px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .glass-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200,169,110,0.15);
+      border: 1px solid rgba(200,169,110,0.3);
+      border-radius: 6px;
+      padding: 7px 12px;
+      font-size: 11px;
+      color: var(--gold-light);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 500;
+      width: fit-content;
+    }
+    .glass-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.2;
+    }
+    .glass-svg-area {
+      flex: 1;
+      background: rgba(255,255,255,0.04);
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.08);
+      overflow: hidden;
+      position: relative;
+    }
+    .glass-svg-area svg { width: 100%; height: 100%; }
+    .glass-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .glass-stat {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+    }
+    .glass-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .glass-stat-lbl {
+      font-size: 9px;
+      color: var(--text-hint);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+    }
 
-  /* FOOTER */
-  footer{padding:24px 40px;border-top:1px solid #e8e8e8;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-  .footer-copy{font-size:12px;color:#888}
-  .footer-rating{font-size:12px;color:#888;display:flex;align-items:center;gap:8px}
-  .rating-pill{background:#E6F1FB;color:#0C447C;font-size:12px;font-weight:600;padding:3px 12px;border-radius:20px}
+    /* ─── SECTION SHARED ─── */
+    .section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+    .section-eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .section-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 40px;
+      line-height: 1.15;
+    }
 
-  /* MOBILE */
-  @media(max-width:768px){
-    nav{padding:12px 20px}
-    .nav-links{display:none}
-    .hero{grid-template-columns:1fr;padding:36px 20px;gap:28px}
-    .hero h1{font-size:26px}
-    .stats{grid-template-columns:1fr}
-    .stat{border-right:none;border-bottom:1px solid #e8e8e8;padding:18px}
-    section{padding:36px 20px}
-    .services-grid{grid-template-columns:1fr 1fr}
-    .gallery-grid{grid-template-columns:1fr 1fr}
-    .why-grid{grid-template-columns:1fr 1fr}
-    .wa-bar{padding:14px 20px}
-    footer{padding:16px 20px}
-    .form-row{grid-template-columns:1fr}
-  }
-  @media(max-width:480px){
-    .services-grid,.gallery-grid,.why-grid{grid-template-columns:1fr}
-  }
-</style>
+    /* ─── DIVIDER ─── */
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--glass-border2), transparent);
+      margin: 0 40px;
+    }
+
+    /* ─── PRODUCTS ─── */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 16px;
+    }
+    .product-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 14px;
+      padding: 22px;
+      backdrop-filter: var(--blur-sm);
+      cursor: default;
+      transition: background 0.25s, border-color 0.25s, transform 0.12s;
+      position: relative;
+      overflow: hidden;
+      will-change: transform;
+    }
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    }
+    .product-card:hover {
+      background: var(--glass-bg3);
+      border-color: rgba(200,169,110,0.35);
+    }
+    .product-card-shine {
+      position: absolute;
+      top: 0; left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(
+        105deg,
+        transparent 40%,
+        rgba(255,255,255,0.06) 50%,
+        transparent 60%
+      );
+      transition: left 0.5s ease;
+      pointer-events: none;
+    }
+    .product-card:hover .product-card-shine { left: 150%; }
+    .product-icon {
+      width: 46px; height: 46px;
+      background: rgba(200,169,110,0.12);
+      border: 1px solid rgba(200,169,110,0.2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: var(--gold);
+      font-size: 20px;
+    }
+    .product-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 7px;
+    }
+    .product-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .product-tag {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 10px;
+      padding: 3px 9px;
+      border-radius: 4px;
+      background: rgba(200,169,110,0.12);
+      color: var(--gold);
+      border: 1px solid rgba(200,169,110,0.2);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* ─── ENQUIRY ─── */
+    .enquiry-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .enquiry-left h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .enquiry-left p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 28px;
+      font-weight: 300;
+    }
+    .why-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .why-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+    .why-list li i { color: var(--gold); margin-top: 2px; flex-shrink: 0; }
+
+    /* form */
+    .enquiry-form {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border2);
+      border-radius: 16px;
+      padding: 28px;
+      backdrop-filter: var(--blur);
+      position: relative;
+      overflow: hidden;
+    }
+    .enquiry-form::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .form-full { margin-bottom: 10px; }
+    .form-label {
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--text-hint);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    .form-row input,
+    .form-full input,
+    .form-full select,
+    .form-full textarea {
+      width: 100%;
+      padding: 11px 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: var(--text);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .form-row input::placeholder,
+    .form-full input::placeholder,
+    .form-full textarea::placeholder { color: var(--text-hint); }
+    .form-row input:focus,
+    .form-full input:focus,
+    .form-full select:focus,
+    .form-full textarea:focus {
+      border-color: rgba(200,169,110,0.5);
+      background: rgba(255,255,255,0.09);
+    }
+    .form-full select option { background: #112044; color: var(--text); }
+    .form-full textarea { resize: vertical; min-height: 88px; }
+
+    /* ─── COVERAGE ─── */
+    .coverage-wrap {
+      background: linear-gradient(135deg, rgba(200,169,110,0.08) 0%, transparent 60%);
+      border-top: 1px solid var(--glass-border);
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      font-size: 13px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      color: var(--text-muted);
+      backdrop-filter: var(--blur-sm);
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .chip:hover { background: var(--glass-bg2); border-color: var(--glass-border2); }
+    .chip-main {
+      background: rgba(200,169,110,0.15);
+      border-color: rgba(200,169,110,0.35);
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+    .coverage-note {
+      font-size: 12px;
+      color: var(--text-hint);
+      margin-top: 24px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--glass-border);
+      padding: 28px 40px;
+      background: rgba(6,13,26,0.8);
+      backdrop-filter: blur(24px);
+    }
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .footer-phone {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--gold-light);
+      text-decoration: none;
+    }
+    .footer-addr { font-size: 11px; color: var(--text-hint); margin-top: 3px; }
+    .footer-copy {
+      font-size: 11px;
+      color: var(--text-hint);
+      text-align: center;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--glass-border);
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ─── SCROLL REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 760px) {
+      nav { padding: 14px 20px; }
+      .hero { padding: 48px 20px 40px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+      .hero-heading { font-size: 40px; }
+      .section { padding: 56px 20px; }
+      .section-divider { margin: 0 20px; }
+      .enquiry-grid { grid-template-columns: 1fr; gap: 32px; }
+      .form-row { grid-template-columns: 1fr; }
+      footer { padding: 24px 20px; }
+    }
+  </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <div class="logo">
-    <div class="logo-box">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5h18v14H3V5zm2 2v10h14V7H5zm2 2h10v6H7V9z"/></svg>
-    </div>
-    <div>
-      <div class="logo-name">Rajamallika Glass House</div>
-      <div class="logo-tag">Madurai's trusted glass experts</div>
-    </div>
-  </div>
-  <div class="nav-links">
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <a href="tel:+919842229659" class="nav-call">📞 Call Now</a>
-</nav>
+<canvas id="bg-canvas"></canvas>
 
-<!-- HERO -->
-<div class="hero">
-  <div>
-    <div class="hero-badge">⭐ 4.6 Rating on Google</div>
-    <h1>Madurai's Best <span>Glass Solutions</span> for Home & Business</h1>
-    <p>Window glass, toughened glass, mirrors, glass doors — premium quality at affordable prices. Trusted by hundreds of families and businesses in Madurai.</p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn-primary">📋 Get Free Quote</a>
-      <a href="https://wa.me/919842229659?text=Hi, I need glass work done. Can you help?" class="btn-wa" target="_blank">💬 WhatsApp Us</a>
-    </div>
-  </div>
-  <div class="hero-card">
-    <div class="glass-types">
-      <div class="glass-type"><div class="icon">🪟</div><span>Window Glass</span></div>
-      <div class="glass-type"><div class="icon">🛡️</div><span>Toughened Glass</span></div>
-      <div class="glass-type"><div class="icon">🚪</div><span>Glass Doors</span></div>
-      <div class="glass-type"><div class="icon">🪞</div><span>Mirrors</span></div>
-    </div>
-    <div class="location-bar">
-      <div class="loc-icon">📍</div>
-      <div>
-        <div class="loc-addr">66/A-6, Bypass Road, Fathima Nagar</div>
-        <div class="loc-sub">Madurai, Tamil Nadu 625016</div>
-      </div>
-      <div class="open-badge">Open Now</div>
-    </div>
-  </div>
-</div>
+<div class="page">
 
-<!-- STATS -->
-<div class="stats">
-  <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Years of Experience</div></div>
-  <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Happy Customers</div></div>
-  <div class="stat"><div class="stat-num">4.6 ⭐</div><div class="stat-label">Google Rating</div></div>
-</div>
-
-<!-- SERVICES -->
-<section id="services" class="services-bg">
-  <div class="section-tag">What We Offer</div>
-  <div class="section-title">Our Services</div>
-  <div class="section-sub">We provide all types of glass solutions for residential and commercial needs.</div>
-  <div class="services-grid">
-    <div class="service-card"><div class="service-icon">🪟</div><h3>Window Glass</h3><p>Plain, tinted, frosted, and reflective glass for all types of windows. Custom sizes available.</p></div>
-    <div class="service-card"><div class="service-icon">🛡️</div><h3>Toughened Glass</h3><p>5x stronger than regular glass. Ideal for doors, partitions, shower enclosures, and facades.</p></div>
-    <div class="service-card"><div class="service-icon">🚪</div><h3>Glass Doors & Partitions</h3><p>Sliding, frameless, and swing glass doors. Office partitions with elegant finish.</p></div>
-    <div class="service-card"><div class="service-icon">🪞</div><h3>Mirrors</h3><p>Bathroom mirrors, decorative mirrors, gym mirrors, and custom-cut mirror panels.</p></div>
-    <div class="service-card"><div class="service-icon">🏢</div><h3>Commercial Glazing</h3><p>Shopfronts, office buildings, curtain walls, and storefront glass solutions.</p></div>
-    <div class="service-card"><div class="service-icon">🔧</div><h3>Glass Repair</h3><p>Quick and affordable repair and replacement service for cracked or broken glass.</p></div>
+  <!-- Ribbon -->
+  <div class="sg-ribbon">
+    <div class="sg-dot sg-red"></div>
+    <div class="sg-dot sg-blue"></div>
+    Authorized Saint-Gobain Distributor — Madurai &amp; Surrounding Districts
   </div>
-</section>
 
-<!-- GALLERY -->
-<section id="gallery">
-  <div class="section-tag">Our Work</div>
-  <div class="section-title">Project Gallery</div>
-  <div class="section-sub">Some of the work we have done for homes and businesses across Madurai.</div>
-  <div class="gallery-grid">
-    <div class="gallery-item"><div class="g-icon">🪟</div><span>Residential Windows</span></div>
-    <div class="gallery-item"><div class="g-icon">🚪</div><span>Glass Door Installation</span></div>
-    <div class="gallery-item"><div class="g-icon">🏢</div><span>Office Partition</span></div>
-    <div class="gallery-item"><div class="g-icon">🛁</div><span>Shower Enclosure</span></div>
-    <div class="gallery-item"><div class="g-icon">🪞</div><span>Decorative Mirror</span></div>
-    <div class="gallery-item"><div class="g-icon">🏪</div><span>Shopfront Glazing</span></div>
-  </div>
-</section>
-
-<!-- WHY US -->
-<section style="background:#f7f9fc">
-  <div class="section-tag">Why Choose Us</div>
-  <div class="section-title">What Makes Us Different</div>
-  <div class="section-sub">We don't just sell glass — we deliver quality, on time, every time.</div>
-  <div class="why-grid">
-    <div class="why-card"><div class="w-icon">⚡</div><h4>Fast Installation</h4><p>We complete most jobs within 24–48 hours of your order.</p></div>
-    <div class="why-card"><div class="w-icon">💰</div><h4>Best Price Guarantee</h4><p>Competitive pricing with no hidden charges. Free site visit and estimation.</p></div>
-    <div class="why-card"><div class="w-icon">🔒</div><h4>Quality Materials</h4><p>We use only certified, high-quality glass from trusted manufacturers.</p></div>
-    <div class="why-card"><div class="w-icon">👨‍🔧</div><h4>Expert Team</h4><p>Skilled and experienced glass workers with 15+ years in the trade.</p></div>
-    <div class="why-card"><div class="w-icon">📞</div><h4>Responsive Support</h4><p>We answer calls quickly and are available 6 days a week.</p></div>
-    <div class="why-card"><div class="w-icon">🏡</div><h4>Home & Office</h4><p>We handle projects of all sizes — from a single window to full commercial glazing.</p></div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="reviews" class="reviews-bg">
-  <div class="section-tag">Customer Reviews</div>
-  <div class="section-title">What People Say</div>
-  <div class="section-sub">Real reviews from real customers on Google.</div>
-  <div class="reviews-grid">
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <div class="review-text">"Service is so good. The shop owner is very kind and explained everything in detail regarding the work. Had a very good experience with them."</div>
-      <div class="reviewer-name">Verified Google Customer</div>
-      <div class="reviewer-tag">Madurai</div>
+  <!-- Nav -->
+  <nav>
+    <div class="nav-logo">
+      Century Glass
+      <span>Est. 1998 · Sellur, Madurai</span>
     </div>
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <div class="review-text">"Got toughened glass installed for my shop. Very professional team, clean work, and the price was reasonable. Highly recommend Rajamallika!"</div>
-      <div class="reviewer-name">Local Business Owner</div>
-      <div class="reviewer-tag">Madurai</div>
-    </div>
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <div class="review-text">"Fixed our broken window the same day I called. Quick response, neat work. Will definitely call them again for future glass needs."</div>
-      <div class="reviewer-name">Happy Homeowner</div>
-      <div class="reviewer-tag">Fathima Nagar, Madurai</div>
-    </div>
-    <div class="review-card">
-      <div class="stars">★★★★☆</div>
-      <div class="review-text">"Good quality mirrors at a fair price. The team was polite and careful during installation. Overall a good experience."</div>
-      <div class="reviewer-name">Interior Designer Client</div>
-      <div class="reviewer-tag">Madurai</div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-tag">Get In Touch</div>
-  <div class="section-title">Contact Us</div>
-  <div class="contact-grid">
-    <div>
-      <div class="contact-items">
-        <div class="contact-item">
-          <div class="c-icon">📍</div>
-          <div><div class="c-label">Address</div><div class="c-val">66/A-6, Bypass Road, Fathima Nagar,<br>Madurai, Tamil Nadu 625016</div></div>
-        </div>
-        <div class="contact-item">
-          <div class="c-icon">📞</div>
-          <div><div class="c-label">Phone</div><div class="c-val"><a href="tel:+919842229659" style="color:#185FA5">+91 98422 29659</a></div></div>
-        </div>
-        <div class="contact-item">
-          <div class="c-icon">💬</div>
-          <div><div class="c-label">WhatsApp</div><div class="c-val"><a href="https://wa.me/919842229659" target="_blank" style="color:#25D366">Chat with us on WhatsApp</a></div></div>
-        </div>
-      </div>
-      <div style="margin-top:24px">
-        <div style="font-size:14px;font-weight:600;margin-bottom:12px">Working Hours</div>
-        <div class="hours-row"><span class="hours-day">Monday – Saturday</span><span class="hours-time">10:00 AM – 10:00 PM</span></div>
-        <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time closed">Closed</span></div>
-      </div>
-      <div style="margin-top:24px;background:#f7f9fc;border-radius:10px;overflow:hidden;border:1px solid #e8e8e8">
-        <iframe src="https://maps.google.com/maps?q=Rajamallika+Glass+House+Madurai&output=embed" width="100%" height="200" style="border:none;display:block" loading="lazy" title="Rajamallika Glass House Location"></iframe>
-      </div>
-    </div>
-    <div class="quote-form">
-      <h3>Get a Free Quote 📋</h3>
-      <div class="form-row">
-        <div class="form-group"><label>Your Name</label><input type="text" placeholder="Enter your name"></div>
-        <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+91 XXXXX XXXXX"></div>
-      </div>
-      <div class="form-group"><label>Glass Type Needed</label>
-        <select>
-          <option value="">Select glass type...</option>
-          <option>Window Glass</option>
-          <option>Toughened Glass</option>
-          <option>Glass Door</option>
-          <option>Mirror</option>
-          <option>Office Partition</option>
-          <option>Shopfront Glass</option>
-          <option>Shower Enclosure</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="form-group"><label>Location / Area</label><input type="text" placeholder="Your area in Madurai"></div>
-      <div class="form-group"><label>Message</label><textarea placeholder="Describe your glass requirement — size, quantity, or any special needs..."></textarea></div>
-      <a href="https://wa.me/919842229659?text=Hi, I need a quote for glass work. Please help!" target="_blank">
-        <button class="submit-btn" style="width:100%">💬 Send via WhatsApp</button>
+    <div class="nav-right">
+      <a href="tel:+919442910175" class="nav-phone">94429 10175</a>
+      <a href="#enquiry" class="btn-primary">
+        <i class="ti ti-clipboard-list"></i>
+        Bulk enquiry
       </a>
     </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <p class="hero-eyebrow">Glass · Aluminium · Ply · Hardware</p>
+        <h1 class="hero-heading">Precision glass<br/>for every<br/><em>build scale</em></h1>
+        <p class="hero-sub">From single-site architects to large housing contractors — we supply certified Saint-Gobain glass across Madurai, Dindigul, Virudhunagar, and Theni.</p>
+        <div class="hero-btns">
+          <a href="#enquiry" class="btn-primary">
+            <i class="ti ti-clipboard-list"></i>
+            Bulk enquiry
+          </a>
+          <a href="#catalogue" class="btn-glass">
+            View catalogue
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="glass-cube" id="glassCube">
+          <div class="glass-face">
+            <div class="glass-inner-content">
+              <div class="glass-badge">
+                <i class="ti ti-award" style="font-size:14px"></i>
+                Saint-Gobain authorized
+              </div>
+              <div class="glass-title">Premium glass supply for South Tamil Nadu</div>
+              <div class="glass-svg-area">
+                <svg viewBox="0 0 260 180" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <pattern id="g2" width="22" height="22" patternUnits="userSpaceOnUse">
+                      <path d="M 22 0 L 0 0 0 22" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+                    </pattern>
+                  </defs>
+                  <rect width="260" height="180" fill="rgba(255,255,255,0.03)"/>
+                  <rect width="260" height="180" fill="url(#g2)"/>
+                  <rect x="18"  y="16"  width="78"  height="148" fill="rgba(200,169,110,0.06)" stroke="rgba(200,169,110,0.35)" stroke-width="1" rx="3"/>
+                  <rect x="23"  y="21"  width="68"  height="138" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" rx="2"/>
+                  <rect x="108" y="16"  width="134" height="70"  fill="rgba(91,155,213,0.06)"  stroke="rgba(91,155,213,0.3)"  stroke-width="1" rx="3"/>
+                  <rect x="113" y="21"  width="124" height="60"  fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="0.5" rx="2"/>
+                  <rect x="108" y="97"  width="62"  height="67"  fill="rgba(200,169,110,0.06)" stroke="rgba(200,169,110,0.25)" stroke-width="1" rx="3"/>
+                  <rect x="180" y="97"  width="62"  height="67"  fill="rgba(200,169,110,0.06)" stroke="rgba(200,169,110,0.25)" stroke-width="1" rx="3"/>
+                  <line x1="18"  y1="90"  x2="96"  y2="90"  stroke="rgba(255,255,255,0.12)" stroke-width="0.8"/>
+                  <line x1="57"  y1="16"  x2="57"  y2="164" stroke="rgba(255,255,255,0.12)" stroke-width="0.8"/>
+                  <!-- glare lines -->
+                  <line x1="0" y1="0" x2="260" y2="180" stroke="rgba(200,169,110,0.12)" stroke-width="1"/>
+                  <line x1="260" y1="0" x2="0" y2="180" stroke="rgba(200,169,110,0.07)" stroke-width="0.8"/>
+                </svg>
+              </div>
+              <div class="glass-stats">
+                <div class="glass-stat">
+                  <div class="glass-stat-num">25+</div>
+                  <div class="glass-stat-lbl">Glass types</div>
+                </div>
+                <div class="glass-stat">
+                  <div class="glass-stat-num">4</div>
+                  <div class="glass-stat-lbl">Districts</div>
+                </div>
+                <div class="glass-stat">
+                  <div class="glass-stat-num">26 yrs</div>
+                  <div class="glass-stat-lbl">Experience</div>
+                </div>
+                <div class="glass-stat">
+                  <div class="glass-stat-num">B2B</div>
+                  <div class="glass-stat-lbl">Wholesale</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Products -->
+  <div id="catalogue">
+    <div class="section">
+      <p class="section-eyebrow reveal">Saint-Gobain certified range</p>
+      <h2 class="section-heading reveal">Product catalogue</h2>
+      <div class="products-grid">
+
+        <div class="product-card reveal">
+          <div class="product-card-shine"></div>
+          <div class="product-icon"><i class="ti ti-square"></i></div>
+          <div class="product-name">Float glass</div>
+          <div class="product-desc">Clear &amp; tinted, 3–19 mm. Commercial glazing, partitions, shopfronts.</div>
+          <span class="product-tag">Saint-Gobain</span>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-card-shine"></div>
+          <div class="product-icon"><i class="ti ti-shield"></i></div>
+          <div class="product-name">Toughened glass</div>
+          <div class="product-desc">Safety-certified tempered. Doors, railings, shower cubicles, facades.</div>
+          <span class="product-tag">Saint-Gobain</span>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-card-shine"></div>
+          <div class="product-icon"><i class="ti ti-sun"></i></div>
+          <div class="product-name">Solar control</div>
+          <div class="product-desc">SGG Coolite. Reduces heat gain 40–60%. Ideal for Tamil Nadu climate.</div>
+          <span class="product-tag">Premium</span>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-card-shine"></div>
+          <div class="product-icon"><i class="ti ti-layers"></i></div>
+          <div class="product-name">Laminated glass</div>
+          <div class="product-desc">Acoustic &amp; safety performance. High-rise and luxury residential.</div>
+          <span class="product-tag">Saint-Gobain</span>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-card-shine"></div>
+          <div class="product-icon"><i class="ti ti-border-style-2"></i></div>
+          <div class="product-name">Decorative glass</div>
+          <div class="product-desc">Frosted, patterned, mirror. Interiors, cabinets, feature walls.</div>
+          <span class="product-tag">In stock</span>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-card-shine"></div>
+          <div class="product-icon"><i class="ti ti-building"></i></div>
+          <div class="product-name">Aluminium frames</div>
+          <div class="product-desc">Anodised &amp; powder-coated. Windows, sliding doors, curtain walls.</div>
+          <span class="product-tag">In stock</span>
+        </div>
+
+      </div>
+    </div>
   </div>
-</section>
 
-<!-- WHATSAPP BAR -->
-<div class="wa-bar">
-  <div class="wa-text">💬 Need glass work done? Quick response on WhatsApp — reach us anytime!</div>
-  <a href="https://wa.me/919842229659?text=Hi, I need help with glass work" target="_blank">
-    <button class="wa-btn">💬 Chat on WhatsApp</button>
-  </a>
-</div>
+  <div class="section-divider"></div>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-copy">© 2025 Rajamallika Glass House, Madurai. All rights reserved.</div>
-  <div class="footer-rating">
-    <span>Trusted by Madurai</span>
-    <span class="rating-pill">⭐ 4.6 Google Rating</span>
+  <!-- Enquiry -->
+  <div id="enquiry">
+    <div class="section">
+      <p class="section-eyebrow reveal">For contractors &amp; bulk buyers</p>
+      <h2 class="section-heading reveal">Wholesale enquiry</h2>
+      <div class="enquiry-grid">
+
+        <div class="enquiry-left reveal">
+          <h3>Why source from Century Glass?</h3>
+          <p>Direct Saint-Gobain distributor pricing. No middlemen. Bulk quantities delivered to your project site across 4 districts.</p>
+          <ul class="why-list">
+            <li><i class="ti ti-check"></i>Certified Saint-Gobain range — guaranteed quality</li>
+            <li><i class="ti ti-check"></i>Contractor &amp; architect accounts with credit terms</li>
+            <li><i class="ti ti-check"></i>Site delivery across Madurai, Dindigul, Virudhunagar, Theni</li>
+            <li><i class="ti ti-check"></i>25+ years supplying builders across South Tamil Nadu</li>
+            <li><i class="ti ti-check"></i>Quote turnaround within 4 business hours</li>
+          </ul>
+        </div>
+
+        <div class="enquiry-form reveal">
+          <div class="form-row">
+            <div>
+              <label class="form-label">Your name</label>
+              <input type="text" placeholder="Full name" />
+            </div>
+            <div>
+              <label class="form-label">Company / firm</label>
+              <input type="text" placeholder="Business name" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label class="form-label">Phone</label>
+              <input type="tel" placeholder="Mobile number" />
+            </div>
+            <div>
+              <label class="form-label">Location</label>
+              <input type="text" placeholder="City / district" />
+            </div>
+          </div>
+          <div class="form-full">
+            <label class="form-label">I am a…</label>
+            <select>
+              <option value="">Select your role</option>
+              <option>Building contractor</option>
+              <option>Interior designer / architect</option>
+              <option>Hardware retailer</option>
+              <option>Real estate developer</option>
+              <option>Homeowner / individual</option>
+            </select>
+          </div>
+          <div class="form-full">
+            <label class="form-label">Requirement</label>
+            <textarea placeholder="Glass type, approx. quantity, project timeline…"></textarea>
+          </div>
+          <button class="btn-primary" style="width:100%; justify-content:center; padding:13px;">
+            <i class="ti ti-send"></i>
+            Send enquiry
+          </button>
+        </div>
+
+      </div>
+    </div>
   </div>
-</footer>
 
+  <div class="section-divider"></div>
+
+  <!-- Coverage -->
+  <div class="coverage-wrap">
+    <div class="section">
+      <p class="section-eyebrow reveal">Where we deliver</p>
+      <h2 class="section-heading reveal">Service coverage</h2>
+      <div class="chips reveal">
+        <span class="chip chip-main">Madurai</span>
+        <span class="chip">Dindigul</span>
+        <span class="chip">Virudhunagar</span>
+        <span class="chip">Theni</span>
+        <span class="chip">Sivaganga</span>
+        <span class="chip">Ramanathapuram</span>
+      </div>
+      <p class="coverage-note reveal">* Delivery timelines vary by location. Contact us for project-specific logistics.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Century Glass</div>
+      <div style="text-align:right">
+        <a href="tel:+919442910175" class="footer-phone">94429 10175</a>
+        <div class="footer-addr">Sellur, Madurai · Mon–Sat 9 am – 7 pm</div>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 Century Glass, Madurai. Authorized Saint-Gobain Distributor.</p>
+  </footer>
+
+</div><!-- .page -->
+
+<script>
+/* ─── 1. CANVAS BACKGROUND — floating glass shards ─── */
+(function() {
+  const canvas = document.getElementById('bg-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, shards = [], mouse = { x: 0, y: 0 };
+
+  function resize() {
+    W = canvas.width  = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+  window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; });
+
+  /* shard factory */
+  function mkShard() {
+    const sides = 3 + Math.floor(Math.random() * 3); // 3-5 sides
+    const r = 14 + Math.random() * 36;
+    return {
+      x: Math.random() * W,
+      y: Math.random() * H,
+      r,
+      sides,
+      angle: Math.random() * Math.PI * 2,
+      spin:  (Math.random() - 0.5) * 0.004,
+      vx:    (Math.random() - 0.5) * 0.3,
+      vy:   -0.15 - Math.random() * 0.25,
+      alpha: 0.04 + Math.random() * 0.1,
+      gold:  Math.random() > 0.7,
+    };
+  }
+
+  for (let i = 0; i < 28; i++) shards.push(mkShard());
+
+  function drawPoly(cx, cy, r, sides, angle) {
+    ctx.beginPath();
+    for (let i = 0; i < sides; i++) {
+      const a = angle + (i / sides) * Math.PI * 2;
+      const x = cx + r * Math.cos(a);
+      const y = cy + r * Math.sin(a);
+      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+  }
+
+  function tick() {
+    ctx.clearRect(0, 0, W, H);
+
+    shards.forEach(s => {
+      s.x += s.vx;
+      s.y += s.vy;
+      s.angle += s.spin;
+
+      /* subtle mouse parallax */
+      const dx = (mouse.x / W - 0.5) * 0.06;
+      const dy = (mouse.y / H - 0.5) * 0.06;
+      s.x += dx;
+      s.y += dy;
+
+      if (s.y < -80) { s.y = H + 40; s.x = Math.random() * W; }
+      if (s.x < -80) s.x = W + 40;
+      if (s.x > W + 80) s.x = -40;
+
+      drawPoly(s.x, s.y, s.r, s.sides, s.angle);
+      ctx.strokeStyle = s.gold
+        ? `rgba(200,169,110,${s.alpha * 1.4})`
+        : `rgba(255,255,255,${s.alpha})`;
+      ctx.lineWidth = 0.8;
+      ctx.stroke();
+      ctx.fillStyle = s.gold
+        ? `rgba(200,169,110,${s.alpha * 0.25})`
+        : `rgba(255,255,255,${s.alpha * 0.15})`;
+      ctx.fill();
+    });
+
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* ─── 2. HERO 3D TILT (mouse tracking) ─── */
+(function() {
+  const cube = document.getElementById('glassCube');
+  if (!cube) return;
+  let targetRX = -6, targetRY = 6;
+  let curRX = -6, curRY = 6;
+
+  document.addEventListener('mousemove', e => {
+    const cx = window.innerWidth / 2;
+    const cy = window.innerHeight / 2;
+    targetRY =  ((e.clientX - cx) / cx) * 12;
+    targetRX = -((e.clientY - cy) / cy) * 8;
+  });
+
+  function animTilt() {
+    curRX += (targetRX - curRX) * 0.06;
+    curRY += (targetRY - curRY) * 0.06;
+    cube.style.transform = `rotateX(${curRX}deg) rotateY(${curRY}deg)`;
+    requestAnimationFrame(animTilt);
+  }
+  animTilt();
+})();
+
+/* ─── 3. PRODUCT CARDS — 3D tilt on hover ─── */
+(function() {
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top  + rect.height / 2;
+      const rx = -((e.clientY - cy) / (rect.height / 2)) * 7;
+      const ry =  ((e.clientX - cx) / (rect.width  / 2)) * 7;
+      card.style.transform = `perspective(600px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(6px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(600px) rotateX(0) rotateY(0) translateZ(0)';
+    });
+  });
+})();
+
+/* ─── 4. SCROLL REVEAL ─── */
+(function() {
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+})();
+</script>
 </body>
 </html>
